@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body{
+            background-color: rgb(26, 24, 24);
+        }
+        svg{
+            width: 800px;
+            height: 800px;
+            display: block;
+            /* border: 1px solid black; */
+            margin: 100px auto;
+        }
+        svg>circle{
+            fill: rgb(102, 95, 95);
+            stroke: rgb(255, 0, 0);
+            stroke-width: 10px;
+            stroke-dasharray: 0px 1500px;
+            animation: load 2s linear forwards infinite 1s;
+        }
+        @keyframes load {
+            to{stroke-dasharray: 2400px 0px;stroke-dashoffset: 500px; }
+        }
+        svg>text{
+            font-size: 5rem;
+            font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
+            font-weight: bold;
+            text-transform: uppercase;
+            stroke: white;
+            stroke-width: 1px;
+            animation: txt 7s 1s linear alternate infinite ;
+        }
+        @keyframes txt{
+            25%{stroke-dasharray: 1500px 0px;}
+            50%{stroke-dasharray: 1500px 0px;}
+            75%{stroke-dasharray: 0px 1500px;}
+            100%{stroke-dasharray: 0px 1500px;}
+
+            
+        }
+    </style>
+</head>
+<body>
+    <svg>
+        <circle r="30%" cx="50%" cy="50%"></circle>
+        <text x="23%" y="50%">loading...</text>
+    </svg>
+</body>
+</html>

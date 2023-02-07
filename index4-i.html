@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+
+        }
+        body{
+            background-color: whitesmoke;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+        }
+        .box{
+            background-color: pink;
+            border-radius: 10px;
+            width: 250px;
+            clip-path: circle(10% at 90% 40%);
+            position: relative;
+            transition: 2s;
+        }
+        .box:hover{
+            clip-path: circle(75%);
+            background-color: rgb(190, 106, 120);
+        }
+        .box:hover span{
+            color:rgb(190, 106, 120) ;
+        }
+        .box>span{
+            position: absolute;
+            top: 1px;
+            right: 20px;
+            z-index: 1;
+            color: white;
+            font-size: 2em;
+        }
+        .box>h1{
+           margin-left: 15px;
+        }
+        .box>p{
+           margin-left: 15px;
+        }
+    </style>
+</head>
+<body>
+    <div class="box">
+        <span>i</span>
+        <h1>Hey !</h1>
+        <p>I'm Piunik Arakelian</p>
+    </div>
+</body>
+</html>
